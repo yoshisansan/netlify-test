@@ -43,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
           console.log(result.errors)
           reject(result.errors)
         }
- 
+
         // Create Page pages.
         const pageTemplate = path.resolve("./src/templates/page.js")
         const portfolioUnderContentTemplate = path.resolve("./src/templates/portfolioUnderContent.js")
@@ -54,9 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
           // to interact with Gatsby.
-          console.log('-----------------');
-          console.log(edge.node.title,edge.node.template);
-          console.log('-----------------');
+
           createPage({
             // Each page is required to have a `path` as well
             // as a template component. The `context` is
